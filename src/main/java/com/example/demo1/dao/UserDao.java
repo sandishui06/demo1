@@ -9,13 +9,6 @@ import java.util.List;
 @Mapper
 @Repository
 public interface UserDao {
-    void usershow(Users users);
 
     List<Users> queryshow();
-
-    Users updateshow(Integer id);
-
-    void update(Users users);
-
-    void deleteId(Integer id);
 }

@@ -11,31 +11,14 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    private UserDao userDao;
+    private UserService userService;
 
 
-    @Override
-    public void add(Users users) {
-        this.userDao.usershow(users);
-    }
 
     @Override
     public List<Users> queryshow() {
-        return userDao.queryshow();
+        return userService.queryshow();
     }
 
-    @Override
-    public Users updateshow(Integer id) {
-        return this.userDao.updateshow(id);
-    }
 
-    @Override
-    public void update(Users users) {
-        this.userDao.update(users);
-    }
-
-    @Override
-    public void deleteId(Integer id) {
-        this.userDao.deleteId(id);
-    }
 }
